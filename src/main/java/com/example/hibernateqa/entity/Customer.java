@@ -2,8 +2,8 @@ package com.example.hibernateqa.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "customer")
@@ -21,7 +21,7 @@ public class Customer {
     private LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
-    private List<Order> orders = new ArrayList<>();
+    private Set<Order> orders = new HashSet<>();
 
     public Customer() {
     }
@@ -44,6 +44,6 @@ public class Customer {
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 
-    public List<Order> getOrders() { return orders; }
-    public void setOrders(List<Order> orders) { this.orders = orders; }
+    public Set<Order> getOrders() { return orders; }
+    public void setOrders(Set<Order> orders) { this.orders = orders; }
 }

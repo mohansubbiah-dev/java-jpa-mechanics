@@ -1,5 +1,6 @@
 package com.example.hibernateqa.controller;
 
+import com.example.hibernateqa.entity.Customer;
 import com.example.hibernateqa.entity.Order;
 import com.example.hibernateqa.service.NPlusOneDemoService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,12 +20,12 @@ public class NPlusOneController {
     }
 
     @GetMapping("/bad")
-    public List<Order> bad() {
+    public List<Customer> bad() {
         return service.getOrdersWithNPlusOneProblem();
     }
 
     @GetMapping("/fixed")
-    public List<Order> fixed() {
+    public List<Customer> fixed() {
         return service.getOrdersWithFetchJoinFix();
     }
 }
