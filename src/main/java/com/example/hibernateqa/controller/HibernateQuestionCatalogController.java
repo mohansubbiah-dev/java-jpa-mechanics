@@ -20,7 +20,9 @@ public class HibernateQuestionCatalogController {
                 Map.of("topic", "Lazy vs Eager", "url", "/hibernate/fetch/customers"),
                 Map.of("topic", "Optimistic locking", "url", "/hibernate/locking/deposit/{id}?amount=100"),
                 Map.of("topic", "Inheritance mapping", "url", "/hibernate/inheritance/employee"),
-                Map.of("topic", "First-level cache", "url", "/hibernate/cache/product/{id}")
+                Map.of("topic", "First-level cache", "url", "/hibernate/cache/product/{id}"),
+                Map.of("topic", "SQL injection", "url", "/hibernate/sqlinjection/vulnerable?name=' OR '1'='1"),
+                Map.of("topic", "SQL injection fixed", "url", "/hibernate/sqlinjection/fixed?name=' OR '1'='1")
         );
     }
 }
