@@ -1,7 +1,6 @@
 package com.example.hibernateqa.controller;
 
 import com.example.hibernateqa.entity.Customer;
-import com.example.hibernateqa.entity.Order;
 import com.example.hibernateqa.service.NPlusOneDemoService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

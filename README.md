@@ -8,6 +8,7 @@ This project is a focused Spring Boot + JPA/Hibernate app for Java developers ex
 - Lazy vs eager fetch demo
 - Optimistic locking example
 - Inheritance mapping example
+- SQL injection example (vulnerable native query) and fixed (parameterized) version
 - Hibernate question catalog endpoint
 
 ## Run locally
@@ -54,6 +55,8 @@ mvn spring-boot:run -Dspring-boot.run.arguments="--spring.profiles.active=prod"
 - `/hibernate/inheritance/employee`
 - `/hibernate/inheritance/manager`
 - `/hibernate/cache/product/{id}`
+- `/hibernate/sqlinjection/vulnerable?name=...` (string-concatenated native SQL, exploitable with e.g. `' OR '1'='1`)
+- `/hibernate/sqlinjection/fixed?name=...` (parameterized query, same input treated as literal data)
 
 ## SQL scripts
 
